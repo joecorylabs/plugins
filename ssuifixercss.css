@@ -1,3 +1,18 @@
-.MenuHeader-container-SO_WG{
-color: red !important;
+ .sqs-custom-css-content .subtitle{
+   display: none !important;
+ }
+
+ .sqs-custom-css-content .CodeMirror-scroll{
+   margin-bottom: 0px !important;
+   padding-bottom: 0px !important;
+ }
+
+.CodeMirror-scroll{
+  overflow: hidden !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.CodeMirror-sizer{
+  margin-bottom: 12px !important;
 }

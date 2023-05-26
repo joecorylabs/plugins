@@ -40,6 +40,11 @@ function domWatch(parent, child, options, callback){
                 }
                 
               })
+              }else{
+                const actives = targetNode.querySelectorAll('.CodeMirror-code .active').forEach((element) => {
+                element.classList.remove('active')
+                  element.style.backgroundColor = "rgba(255,0,0,0)"
+              })
               }
             })
             
@@ -56,6 +61,11 @@ function domWatch(parent, child, options, callback){
                     button.parentNode.style.backgroundColor = "rgba(255,0,0,0.3)"
                 }
                 
+              })
+              }else{
+                const actives = targetNode.querySelectorAll('.CodeMirror-code .active').forEach((element) => {
+                element.classList.remove('active')
+                  element.style.backgroundColor = "rgba(255,0,0,0)"
               })
               }
             })

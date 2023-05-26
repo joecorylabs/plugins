@@ -27,6 +27,7 @@ function domWatch(parent, child, options, callback){
             targetNode.querySelector('.code-editor').insertBefore(csssearch, targetNode.querySelector('.code-editor').firstChild)
             
             targetNode.querySelectorAll('.CodeMirror-scroll')[0].addEventListener("scroll", (event) => {
+              if(targetNode.querySelectorAll('#cssSearch')[0].value.toLowerCase() !== ""){
               const actives = targetNode.querySelectorAll('.CodeMirror-code .active').forEach((element) => {
                 element.classList.remove('active')
                   element.style.backgroundColor = "rgba(255,0,0,0)"
@@ -39,10 +40,11 @@ function domWatch(parent, child, options, callback){
                 }
                 
               })
-              ////////
+              }
             })
             
             targetNode.querySelectorAll('#cssSearch')[0].addEventListener("input", (event) => {
+              if(targetNode.querySelectorAll('#cssSearch')[0].value.toLowerCase() !== ""){
               const actives = targetNode.querySelectorAll('.CodeMirror-code .active').forEach((element) => {
                 element.classList.remove('active')
                   element.style.backgroundColor = "rgba(255,0,0,0)"
@@ -55,7 +57,7 @@ function domWatch(parent, child, options, callback){
                 }
                 
               })
-              ////////
+              }
             })
             
             window.dispatchEvent(new Event('resize'));
